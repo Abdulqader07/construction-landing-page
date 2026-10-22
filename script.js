@@ -57,28 +57,37 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
 
 
 // =========================================
-// 4. LIGHTBOX GALLERY LOGIC
+// 4. LIGHTBOX GALLERY LOGIC (UPDATED FILE NAMES)
 // =========================================
 const projectGalleries = {
-    'bighouse': [
-        'images/bighouse.jpeg',
-        'images/bighouse2.jpeg',
-        'images/bighouse3.jpeg'
+    'building': [
+        'images/building(cover).png',
+        'images/building2.png',
+        'images/building3.png',
+        'images/building4.png'
     ],
-    'villa': [
-        'images/villa.jpeg',
-        'images/villa2.jpeg',
-        'images/villa3.jpeg',
-        'images/villa4.jpeg',
-        'images/villa5.jpeg'
+    'hospital': [
+        'images/hospital(cover).jpg',
+        'images/hospital2.png',
+        'images/hospital3.png',
+        'images/hospital4.png'
     ],
-    'house': [
-        'images/house1.jpeg',
-        'images/house2.jpeg'
+    'something': [
+        'images/something(cover).png',
+        'images/something2.png',
+        'images/something3.png',
+        'images/something4.png'
     ],
-    'parking': [
-        'images/parking.jpeg',
-        'images/parking2.jpeg'
+    'stadium': [
+        'images/stadium(cover).png',
+        'images/stadium2.png',
+        'images/stadium3.png',
+        'images/stadium4.png',
+        'images/stadium5.png',
+        'images/stadium6.png',
+        'images/stadium7.png',
+        'images/stadium8.png',
+        'images/stadium9.png'
     ]
 };
 

@@ -16,7 +16,7 @@
         <nav class="navbar">
             <div class="logo-container">
                 <a href="/" class="logo-link" style="direction: ltr;">
-                    <img src="images/logo.svg" alt="Al-Medah Logo" class="logo-svg" onerror="this.src='https://placehold.co/200x80/050505/ffffff?text=Al-Medah'">
+                    <img src="images/logo.svg?v=3" alt="Al-Medah Logo" class="logo-svg">
                 </a>
                 
                 <div class="nav-links">
@@ -53,7 +53,7 @@
         <!-- Hero Section -->
         <header id="home" class="hero">
             <div class="hero-bg">
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop" alt="Luxury Real Estate">
+                <img src="images/home.png?v=3" alt="Luxury Real Estate">
                 <div class="hero-overlay"></div>
                 <div class="hero-gradient"></div>
             </div>
@@ -100,7 +100,7 @@
                             <div class="mockup-url"></div>
                         </div>
                         <div class="mockup-body">
-                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1000&auto=format&fit=crop" alt="Architecture" class="grayscale-hover">
+                            <img src="images/villa.jpeg?v=3" alt="Architecture" class="grayscale-hover">
                             <div class="mockup-overlay"></div>
                             <div class="mockup-text text-block">
                                 <div class="mockup-label" data-en="Featured Asset" data-ar="أصل مميز">Featured Asset</div>
@@ -120,64 +120,52 @@
             </div>
 
             <div class="work-grid">
-                <!-- Project 1 -->
-                <article class="project-card reveal" onclick="openLightbox('bighouse')">
+                <!-- Project 1: Building (PNG) -->
+                <article class="project-card reveal" onclick="openLightbox('building')">
                     <div class="project-img-wrap reveal-img">
-                        <img src="images/bighouse.jpeg" alt="Bighouse" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop'">
-                        <div class="project-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> 3</div>
+                        <img src="images/building(cover).png?v=3" alt="Rawdhat Al-Darraja Project" class="project-img">
+                        <div class="project-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> 4</div>
                     </div>
                     <div class="project-info text-block">
-                        <h3 data-en="The Grand Residence" data-ar="الإقامة الكبرى">The Grand Residence</h3>
-                        <p class="project-cat" data-en="Residential / Luxury Estate" data-ar="سكني / عقار فاخر">Residential / Luxury Estate</p>
+                        <h3 data-en="Rawdhat Al-Darraja Project - Jeddah" data-ar="مشروع روضة الدراجة - جدة">Rawdhat Al-Darraja Project - Jeddah</h3>
+                        <p class="project-cat" data-en="Commercial / High-Rise" data-ar="تجاري / أبراج عالية">Commercial / High-Rise</p>
                     </div>
-                    <p class="project-desc text-block" data-en="An architectural masterpiece offering expansive living spaces, private pools, and smart home integration. Designed for those who seek the pinnacle of comfort and exclusivity." data-ar="تحفة معمارية توفر مساحات معيشة واسعة ومسابح خاصة وتكامل المنازل الذكية. مصممة لمن يبحثون عن قمة الراحة والحصرية.">
-                        An architectural masterpiece offering expansive living spaces, private pools, and smart home integration. Designed for those who seek the pinnacle of comfort and exclusivity.
-                    </p>
                 </article>
 
-                <!-- Project 2 -->
-                <article class="project-card md-mt-24 reveal delay-100" onclick="openLightbox('villa')">
+                <!-- Project 2: Hospital (JPG) -->
+                <article class="project-card md-mt-24 reveal delay-100" onclick="openLightbox('hospital')">
                     <div class="project-img-wrap reveal-img">
-                        <img src="images/villa.jpeg" alt="Villa" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop'">
-                        <div class="project-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> 5</div>
+                        <img src="images/hospital(cover).jpg?v=3" alt="Al-Hammadi Hospital" class="project-img">
+                        <div class="project-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> 4</div>
                     </div>
                     <div class="project-info text-block">
-                        <h3 data-en="The Signature Villa" data-ar="الفيلا المميزة">The Signature Villa</h3>
-                        <p class="project-cat" data-en="Residential / Premium Living" data-ar="سكني / حياة فاخرة">Residential / Premium Living</p>
+                        <h3 data-en="Al-Hammadi Hospital - Riyadh" data-ar="مستشفى الحمادي - الرياض">Al-Hammadi Hospital - Riyadh</h3>
+                        <p class="project-cat" data-en="Healthcare / Interior Fit-out" data-ar="رعاية صحية / تجهيز داخلي">Healthcare / Interior Fit-out</p>
                     </div>
-                    <p class="project-desc text-block" data-en="A private sanctuary blending contemporary design with timeless elegance. Features include bespoke interiors, landscaped gardens, and unmatched privacy for the discerning homeowner." data-ar="ملاذ خاص يمزج بين التصميم المعاصر والأناقة الخالدة. تشمل الميزات تصاميم داخلية مخصصة وحدائق منسقة وخصوصية لا مثيل لها لأصحاب المنازل المميزين.">
-                        A private sanctuary blending contemporary design with timeless elegance. Features include bespoke interiors, landscaped gardens, and unmatched privacy for the discerning homeowner.
-                    </p>
                 </article>
 
-                <!-- Project 3 -->
-                <article class="project-card reveal" onclick="openLightbox('house')">
+                <!-- Project 3: Something (PNG) -->
+                <article class="project-card reveal" onclick="openLightbox('something')">
                     <div class="project-img-wrap reveal-img">
-                        <img src="images/house1.jpeg" alt="House Project" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000&auto=format&fit=crop'">
-                        <div class="project-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> 2</div>
+                        <img src="images/something(cover).png?v=3" alt="Al-Jawhara Al-Aziziyah Tower" class="project-img">
+                        <div class="project-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> 4</div>
                     </div>
                     <div class="project-info text-block">
-                        <h3 data-en="The Family Home" data-ar="منزل العائلة">The Family Home</h3>
-                        <p class="project-cat" data-en="Residential / Family Living" data-ar="سكني / حياة عائلية">Residential / Family Living</p>
+                        <h3 data-en="Al-Jawhara Al-Aziziyah Tower - Makkah" data-ar="برج الجوهرة العزيزية - مكة">Al-Jawhara Al-Aziziyah Tower - Makkah</h3>
+                        <p class="project-cat" data-en="Infrastructure / Engineering" data-ar="بنية تحتية / هندسة">Infrastructure / Engineering</p>
                     </div>
-                    <p class="project-desc text-block" data-en="Thoughtfully designed for modern family life, this residence offers open-plan living, abundant natural light, and secure outdoor spaces. A perfect blend of comfort and functionality." data-ar="مصمم بعناية للحياة العائلية الحديثة، يوفر هذا المسكن مساحات معيشة مفتوحة وضوءاً طبيعياً وفيراً ومساحات خارجية آمنة. مزيج مثالي من الراحة والوظائف العملية.">
-                        Thoughtfully designed for modern family life, this residence offers open-plan living, abundant natural light, and secure outdoor spaces. A perfect blend of comfort and functionality.
-                    </p>
                 </article>
 
-                <!-- Project 4 -->
-                <article class="project-card md-mt-24 reveal delay-100" onclick="openLightbox('parking')">
+                <!-- Project 4: Stadium (PNG) -->
+                <article class="project-card md-mt-24 reveal delay-100" onclick="openLightbox('stadium')">
                     <div class="project-img-wrap reveal-img">
-                        <img src="images/parking.jpeg" alt="Parking Project" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop'">
-                        <div class="project-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> 2</div>
+                        <img src="images/stadium(cover).png?v=3" alt="Stadium Project" class="project-img">
+                        <div class="project-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> 9</div>
                     </div>
                     <div class="project-info text-block">
-                        <h3 data-en="The Urban Parking Hub" data-ar="مركز وقوف السيارات الحضري">The Urban Parking Hub</h3>
-                        <p class="project-cat" data-en="Commercial / Urban Infrastructure" data-ar="تجاري / بنية تحتية حضرية">Commercial / Urban Infrastructure</p>
+                        <h3 data-en="Stadium - Jeddah" data-ar="ملعب ستاد - جدة">Stadium - Jeddah</h3>
+                        <p class="project-cat" data-en="Entertainment / Mega-Project" data-ar="ترفيه / مشروع ضخم">Entertainment / Mega-Project</p>
                     </div>
-                    <p class="project-desc text-block" data-en="A smart, multi-level parking facility designed to optimize urban space. Featuring advanced security systems and seamless access, it delivers a reliable infrastructure solution for modern developments." data-ar="منشأة وقوف سيارات ذكية متعددة المستويات مصممة لتحسين المساحات الحضرية. تتميز بأنظمة أمان متقدمة ووصول سلس، وتقدم حلاً بنيوياً موثوقاً للتطورات الحديثة.">
-                        A smart, multi-level parking facility designed to optimize urban space. Featuring advanced security systems and seamless access, it delivers a reliable infrastructure solution for modern developments.
-                    </p>
                 </article>
             </div>
         </section>
@@ -190,7 +178,7 @@
                         INVEST<br />TODAY.
                     </h2>
                     <div class="footer-contact">
-                        <a href="mailto:info@almedah.com" class="footer-email" style="direction: ltr;">info@almedah.com</a>
+                        <a href="mailto:almedah.info@gmail.com" class="footer-email" style="direction: ltr;">almedah.info@gmail.com</a>
                         <div class="footer-details">
                             <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF6B50" stroke-width="2"><path d="M3 21h18"></path><path d="M9 8h1"></path><path d="M9 12h1"></path><path d="M9 16h1"></path><path d="M14 8h1"></path><path d="M14 12h1"></path><path d="M14 16h1"></path><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path></svg> <span data-en="C.R. 4030186892" data-ar="السجل التجاري 4030186892">C.R. 4030186892</span></p>
                             <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF6B50" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> <span data-en="Chamber of Commerce Membership: 135227" data-ar="عضوية غرفة التجارة: 135227">Chamber of Commerce Membership: 135227</span></p>
