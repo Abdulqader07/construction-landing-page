@@ -57,37 +57,37 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
 
 
 // =========================================
-// 4. LIGHTBOX GALLERY LOGIC (UPDATED FILE NAMES)
+// 4. LIGHTBOX GALLERY LOGIC (UPDATED TO WEBP)
 // =========================================
 const projectGalleries = {
     'building': [
-        'images/building(cover).png',
-        'images/building2.png',
-        'images/building3.png',
-        'images/building4.png'
+        'images/building(cover).webp',
+        'images/building2.webp',
+        'images/building3.webp',
+        'images/building4.webp'
     ],
     'hospital': [
         'images/hospital(cover).jpg',
-        'images/hospital2.png',
-        'images/hospital3.png',
-        'images/hospital4.png'
+        'images/hospital2.webp',
+        'images/hospital3.webp',
+        'images/hospital4.webp'
     ],
     'something': [
-        'images/something(cover).png',
-        'images/something2.png',
-        'images/something3.png',
-        'images/something4.png'
+        'images/something(cover).webp',
+        'images/something2.webp',
+        'images/something3.webp',
+        'images/something4.webp'
     ],
     'stadium': [
-        'images/stadium(cover).png',
-        'images/stadium2.png',
-        'images/stadium3.png',
-        'images/stadium4.png',
-        'images/stadium5.png',
-        'images/stadium6.png',
-        'images/stadium7.png',
-        'images/stadium8.png',
-        'images/stadium9.png'
+        'images/stadium(cover).webp',
+        'images/stadium2.webp',
+        'images/stadium3.webp',
+        'images/stadium4.webp',
+        'images/stadium5.webp',
+        'images/stadium6.webp',
+        'images/stadium7.webp',
+        'images/stadium8.webp',
+        'images/stadium9.webp'
     ]
 };
 
@@ -121,9 +121,6 @@ function updateLightboxImage() {
     
     setTimeout(() => {
         lightboxImg.src = imgSrc;
-        lightboxImg.onerror = function() {
-            this.src = 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1600&auto=format&fit=crop';
-        };
         lightboxImg.style.opacity = '1';
     }, 150);
     
@@ -153,9 +150,6 @@ function buildThumbnails() {
     currentGallery.forEach((imgSrc, index) => {
         const img = document.createElement('img');
         img.src = imgSrc;
-        img.onerror = function() {
-            this.src = 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=200&auto=format&fit=crop';
-        };
         img.classList.add('lightbox-thumb');
         if (index === 0) img.classList.add('active');
         img.onclick = () => {
