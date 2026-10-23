@@ -1,5 +1,43 @@
 // =========================================
-// 1. SCROLL REVEAL ANIMATIONS
+// 1. LANGUAGE PERSISTENCE & TOGGLE
+// =========================================
+let currentLang = localStorage.getItem('siteLang') || 'en';
+
+// Apply the saved language immediately when the page loads
+function applyLanguage(lang) {
+    const body = document.body;
+    
+    if (lang === 'ar') {
+        body.classList.add('rtl');
+        document.documentElement.setAttribute('dir', 'rtl'); 
+    } else {
+        body.classList.remove('rtl');
+        document.documentElement.setAttribute('dir', 'ltr');
+    }
+    
+    document.querySelectorAll('[data-en][data-ar]').forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${lang}`);
+    });
+    
+    currentLang = lang;
+    
+    // Make the body visible now that language is set
+    document.body.classList.add('loaded'); 
+}
+
+// Initialize language on page load
+applyLanguage(currentLang);
+
+// Toggle function for the button
+function toggleLanguage() {
+    const newLang = currentLang === 'en' ? 'ar' : 'en';
+    localStorage.setItem('siteLang', newLang); // Save to browser storage
+    applyLanguage(newLang);
+}
+
+
+// =========================================
+// 2. SCROLL REVEAL ANIMATIONS
 // =========================================
 const revealElements = document.querySelectorAll('.reveal, .reveal-img');
 const revealOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
@@ -16,38 +54,16 @@ revealElements.forEach(el => revealOnScroll.observe(el));
 
 
 // =========================================
-// 2. LANGUAGE TOGGLE
-// =========================================
-let currentLang = 'en';
-
-function toggleLanguage() {
-    const body = document.body;
-    
-    if (currentLang === 'en') {
-        currentLang = 'ar';
-        body.classList.add('rtl');
-        document.documentElement.setAttribute('dir', 'rtl'); 
-    } else {
-        currentLang = 'en';
-        body.classList.remove('rtl');
-        document.documentElement.setAttribute('dir', 'ltr');
-    }
-    
-    document.querySelectorAll('[data-en][data-ar]').forEach(el => {
-        el.innerHTML = el.getAttribute(`data-${currentLang}`);
-    });
-}
-
-
-// =========================================
 // 3. MOBILE MENU TOGGLE
 // =========================================
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
-mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-});
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+    });
+}
 
 document.querySelectorAll('#mobile-menu a').forEach(link => {
     link.addEventListener('click', () => {
@@ -57,7 +73,7 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
 
 
 // =========================================
-// 4. LIGHTBOX GALLERY LOGIC (UPDATED TO WEBP)
+// 4. LIGHTBOX GALLERY LOGIC (UPDATED FOR VILLAS)
 // =========================================
 const projectGalleries = {
     'building': [
@@ -78,16 +94,29 @@ const projectGalleries = {
         'images/something3.webp',
         'images/something4.webp'
     ],
-    'stadium': [
-        'images/stadium(cover).webp',
-        'images/stadium2.webp',
-        'images/stadium3.webp',
-        'images/stadium4.webp',
-        'images/stadium5.webp',
-        'images/stadium6.webp',
-        'images/stadium7.webp',
-        'images/stadium8.webp',
-        'images/stadium9.webp'
+    'construction': [
+        'images/construction(cover).webp',
+        'images/construction2.webp'
+    ],
+    'mosque': [
+        'images/mosque(cover).webp',
+        'images/mosque2.webp',
+        'images/mosque3.webp'
+    ],
+    'towerAhmad': [
+        'images/tower(Ahmad).webp'
+    ],
+    'villas': [
+        'images/villas(cover).webp',
+        'images/villas2.webp',
+        'images/villas3.webp' // Stopped at 3
+    ],
+    'living': [
+        'images/living(cover).webp',
+        'images/living2.webp',
+        'images/living3.webp',
+        'images/living4.webp',
+        'images/living5.webp'
     ]
 };
 

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio | Al-Medah Al-Arabiah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="min-h-screen bg-main overflow-x-hidden">
+        
+        <!-- Top Navigation -->
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="index.html" class="logo-link" style="direction: ltr;">
+                    <img src="images/logo.svg?v=5" alt="Al-Medah Logo" class="logo-svg">
+                </a>
+                
+                <div class="nav-links">
+                    <a href="index.html#home" data-en="Home" data-ar="الرئيسية" class="nav-link">Home</a>
+                    <a href="index.html#about" data-en="About" data-ar="من نحن" class="nav-link">About</a>
+                    <a href="projects.html" data-en="Portfolio" data-ar="محفظة الأعمال" class="nav-link active">Portfolio</a>
+                    <a href="index.html#contact" data-en="Contact" data-ar="اتصل بنا" class="nav-link">Contact</a>
+                </div>
+            </div>
+
+            <div class="nav-controls">
+                <a href="index.html#contact" class="btn-invest" data-en="Invest With Us" data-ar="استثمر معنا">
+                    Invest With Us
+                </a>
+
+                <button onclick="toggleLanguage()" class="lang-btn" aria-label="Switch Language">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </button>
+
+                <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="index.html#home" data-en="Home" data-ar="الرئيسية">Home</a>
+            <a href="index.html#about" data-en="About" data-ar="من نحن">About</a>
+            <a href="projects.html" data-en="Portfolio" data-ar="محفظة الأعمال">Portfolio</a>
+            <a href="index.html#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+        </div>
+
+        <!-- Page Header (Hero styled for the Portfolio Page) -->
+        <header class="hero" style="height: 60vh; min-height: 400px;">
+            <div class="hero-bg">
+                <img src="images/home.webp?v=5" alt="Portfolio Background">
+                <div class="hero-overlay"></div>
+                <div class="hero-gradient"></div>
+            </div>
+            <div class="hero-content hero-animate">
+                <h1 data-en="Our Portfolio" data-ar="محفظة أعمالنا">Our Portfolio</h1>
+                <p data-en="Explore our full range of premium real estate developments and construction projects across the Kingdom." data-ar="استكشف مجموعتنا الكاملة من التطورات العقارية الفاخرة ومشاريع البناء في جميع أنحاء المملكة.">
+                    Explore our full range of premium real estate developments and construction projects across the Kingdom.
+                </p>
+            </div>
+        </header>
+
+        <!-- Full Projects Gallery -->
+        <section class="section-container" style="padding-top: 4rem;">
+            <div class="work-grid">
+                
+                <!-- 1. Construction -->
+                <article class="project-card reveal" onclick="openLightbox('construction')">
+                    <div class="project-img-wrap reveal-img">
+                        <img src="images/construction(cover).webp?v=5" alt="Sheikh Salem Villas" class="project-img">
+                        <div class="project-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> 2</div>
+                    </div>
+                    <div class="project-info text-block">
+                        <h3 data-en="Sheikh Salem Ahmed Bin Yamani Villas - Obhur North" data-ar="فلل الشيخ سالم أحمد بن يماني - أبحر الشمالية">Sheikh Salem Ahmed Bin Yamani Villas - Obhur North</h3>
+                        <p class="project-cat" data-en="Residential / Villas" data-ar="سكني / فلل">Residential / Villas</p>
+                    </div>
+                </article>
+
+                <!-- 2. Mosque -->
+                <article class="project-card md-mt-24 reveal delay-100" onclick="openLightbox('mosque')">
+                    <div class="project-img-wrap reveal-img">
+                        <img src="images/mosque(cover).webp?v=5" alt="Princess Sara Mosque" class="project-img">
+                        <div class="project-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> 3</div>
+                    </div>
+                    <div class="project-info text-block">
+                        <h3 data-en="Princess Sara Bint Musaid Mosque - Makkah" data-ar="انشاء مسجد الاميرة سارة بنت مساعد - مكة">Princess Sara Bint Musaid Mosque - Makkah</h3>
+                        <p class="project-cat" data-en="Religious / Community" data-ar="ديني / مجتمعي">Religious / Community</p>
+                    </div>
+                </article>
+
+                <!-- 3. Tower (Ahmad) -->
+                <article class="project-card reveal" onclick="openLightbox('towerAhmad')">
+                    <div class="project-img-wrap reveal-img">
+                        <img src="images/tower(Ahmad).webp?v=5" alt="Jabal Kaaba Street Tower" class="project-img">
+                        <!-- No badge for single image, or you can put 1 -->
+                    </div>
+                    <div class="project-info text-block">
+                        <h3 data-en="Jabal Kaaba Street Tower - Mr. Ahmed Bashamagh" data-ar="برج شارع جبل الكعبة - السيد أحمد باشماغ">Jabal Kaaba Street Tower - Mr. Ahmed Bashamagh</h3>
+                        <p class="project-cat" data-en="Commercial / Tower" data-ar="تجاري / برج">Commercial / Tower</p>
+                    </div>
+                </article>
+
+                <!-- 4. Villas (Mohammadiyah) -->
+                <article class="project-card md-mt-24 reveal delay-100" onclick="openLightbox('villas')">
+                    <div class="project-img-wrap reveal-img">
+                        <img src="images/villas(cover).webp?v=5" alt="Mohammadiyah Villas" class="project-img">
+                        <div class="project-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> 3</div>
+                    </div>
+                    <div class="project-info text-block">
+                        <h3 data-en="Al-Mohammadiyah Villas Project" data-ar="مشروع فلل - المحمدية">Al-Mohammadiyah Villas Project</h3>
+                        <p class="project-cat" data-en="Residential / Villas" data-ar="سكني / فلل">Residential / Villas</p>
+                    </div>
+                </article>
+
+                <!-- 5. Living (Rawdah) -->
+                <article class="project-card reveal" onclick="openLightbox('living')">
+                    <div class="project-img-wrap reveal-img">
+                        <img src="images/living(cover).webp?v=5" alt="Al-Rawdah Buildings" class="project-img">
+                        <div class="project-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> 5</div>
+                    </div>
+                    <div class="project-info text-block">
+                        <h3 data-en="Al-Rawdah District Buildings - Jeddah" data-ar="مشروع عمائر حي الروضة - جدة">Al-Rawdah District Buildings - Jeddah</h3>
+                        <p class="project-cat" data-en="Residential / Apartments" data-ar="سكني / شقق">Residential / Apartments</p>
+                    </div>
+                </article>
+                
+                 <!-- Re-adding the first 3 projects here so the full list is complete -->
+                 <!-- 6. Building -->
+                <article class="project-card md-mt-24 reveal delay-100" onclick="openLightbox('building')">
+                    <div class="project-img-wrap reveal-img">
+                        <img src="images/building(cover).webp?v=5" alt="Rawdhat Al-Darraja Project" class="project-img">
+                        <div class="project-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> 4</div>
+                    </div>
+                    <div class="project-info text-block">
+                        <h3 data-en="Rawdhat Al-Darraja Project - Jeddah" data-ar="مشروع روضة الدراجة - جدة">Rawdhat Al-Darraja Project - Jeddah</h3>
+                        <p class="project-cat" data-en="Commercial / High-Rise" data-ar="تجاري / أبراج عالية">Commercial / High-Rise</p>
+                    </div>
+                </article>
+
+                <!-- 7. Hospital -->
+                <article class="project-card reveal" onclick="openLightbox('hospital')">
+                    <div class="project-img-wrap reveal-img">
+                        <img src="images/hospital(cover).jpg?v=5" alt="Al-Hammadi Hospital" class="project-img">
+                        <div class="project-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> 4</div>
+                    </div>
+                    <div class="project-info text-block">
+                        <h3 data-en="Al-Hammadi Hospital - Riyadh" data-ar="مستشفى الحمادي - الرياض">Al-Hammadi Hospital - Riyadh</h3>
+                        <p class="project-cat" data-en="Healthcare / Interior Fit-out" data-ar="رعاية صحية / تجهيز داخلي">Healthcare / Interior Fit-out</p>
+                    </div>
+                </article>
+
+                <!-- 8. Something (Tower) -->
+                <article class="project-card md-mt-24 reveal delay-100" onclick="openLightbox('something')">
+                    <div class="project-img-wrap reveal-img">
+                        <img src="images/something(cover).webp?v=5" alt="Al-Jawhara Al-Aziziyah Tower" class="project-img">
+                        <div class="project-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> 4</div>
+                    </div>
+                    <div class="project-info text-block">
+                        <h3 data-en="Al-Jawhara Al-Aziziyah Tower - Makkah" data-ar="برج الجوهرة العزيزية - مكة">Al-Jawhara Al-Aziziyah Tower - Makkah</h3>
+                        <p class="project-cat" data-en="Infrastructure / Engineering" data-ar="بنية تحتية / هندسة">Infrastructure / Engineering</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Back to Home Button -->
+            <div class="show-more-container reveal" style="margin-top: 5rem;">
+                <a href="index.html" class="btn-primary" data-en="Back to Home" data-ar="العودة للرئيسية">
+                    Back to Home
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="footer">
+            <div class="footer-container">
+                <div class="footer-content text-block reveal">
+                    <h2 class="footer-massive-text" data-en="INVEST<br />TODAY." data-ar="استثمر اليوم.">
+                        INVEST<br />TODAY.
+                    </h2>
+                    <div class="footer-contact">
+                        <a href="mailto:almedah.info@gmail.com" class="footer-email" style="direction: ltr;">almedah.info@gmail.com</a>
+                        <div class="footer-details">
+                            <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF6B50" stroke-width="2"><path d="M3 21h18"></path><path d="M9 8h1"></path><path d="M9 12h1"></path><path d="M9 16h1"></path><path d="M14 8h1"></path><path d="M14 12h1"></path><path d="M14 16h1"></path><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path></svg> <span data-en="C.R. 4030186892" data-ar="السجل التجاري 4030186892">C.R. 4030186892</span></p>
+                            <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF6B50" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> <span data-en="Chamber of Commerce Membership: 135227" data-ar="عضوية غرفة التجارة: 135227">Chamber of Commerce Membership: 135227</span></p>
+                            <p class="footer-company"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> <span data-en="Al-Medah Al-Arabiah for Real Estate Investments" data-ar="الميدة العربية للاستثمارات العقارية">Al-Medah Al-Arabiah for Real Estate Investments</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-block reveal">
+                <p data-en="&copy; 2026 Al-Medah Al-Arabiah. All rights reserved." data-ar="&copy; 2026 الميدة العربية. جميع الحقوق محفوظة.">&copy; 2026 Al-Medah Al-Arabiah. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
+                    <a href="#" data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/966555611714?text=Hello%20Al-Medah%20Al-Arabiah,%20I%20am%20interested%20in%20your%20real%20estate%20projects." target="_blank" rel="noopener noreferrer" id="whatsapp-float" aria-label="Contact us on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+    </a>
+
+    <!-- Lightbox -->
+    <div id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+        <div class="lightbox-main">
+            <button class="lightbox-nav prev" onclick="changeImage(-1)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+            <img id="lightbox-img" src="" alt="Gallery Image" class="lightbox-img">
+            <button class="lightbox-nav next" onclick="changeImage(1)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+        </div>
+        <div id="lightbox-thumbnails" class="lightbox-thumbnails"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

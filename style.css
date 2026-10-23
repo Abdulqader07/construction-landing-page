@@ -23,6 +23,20 @@
     --card-bg: #111111;
 }
 
+/* =========================================
+   PREVENT LANGUAGE FLASH
+========================================= */
+body {
+    /* Hides body until JS determines language */
+    visibility: hidden; 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+body.loaded {
+    visibility: visible;
+    opacity: 1;
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -306,4 +320,33 @@ body.rtl .mockup-text { left: auto; right: 1.5rem; }
     .lightbox-thumb { width: 60px; height: 45px; }
     #whatsapp-float { width: 50px; height: 50px; bottom: 1.5rem; right: 1.5rem; }
     body.rtl #whatsapp-float { right: auto; left: 1.5rem; }
+}
+/* =========================================
+   NEW V3 UPDATES
+========================================= */
+
+/* Show More Button Container */
+.show-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    width: 100%;
+}
+
+.show-more-btn {
+    font-size: 1rem;
+    padding: 1rem 2.5rem;
+}
+
+/* Make the project cards act as links */
+.project-link-wrapper {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* Ensure the nav-link 'active' state is visible if you are on projects.html */
+.nav-link.active {
+    color: var(--accent);
 }
